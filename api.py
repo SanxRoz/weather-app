@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, Mock
-from backend import app
+from api.index import app
 
 class TestWeatherAPI(unittest.TestCase):
 
