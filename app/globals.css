@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url("/Home.svg");
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This ensures the background stays in place even if the content overflows and you scroll */
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  border-radius: 12px;
+  background: #24343d;
+  box-shadow: 10px 10px 30px 0px rgba(36, 52, 61, 0.6) inset;
+  display: flex;
+  padding: 10px 30px 10px 30px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.submit_button {
+  display: none;
+}
+
+.weather_data {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.weather_div {
+  display: inline-flex;
+  padding: 20px 52px 20px 52px;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  border-radius: 20px;
+  background: #24353e;
+  box-shadow: 10px 9px 70px 0px rgba(36, 53, 62, 0.4);
+}
+
+.body_div {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.bold_text {
+  color: #fff;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.weather_number {
+  color: #fff;
+  font-style: light;
+  font-weight: 300;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+
+.switch label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+
+input:checked + label {
+  background-color: #2196f3;
+}
+
+input:checked + label:before {
+  transform: translateX(26px);
+}
+
+.input_div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
