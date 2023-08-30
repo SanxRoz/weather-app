@@ -1,14 +1,17 @@
 import unittest
 from unittest.mock import patch
 from flask import Flask
-from backend import app
+import sys
+sys.path.append('..')
+from api.index import app
+
 
 class TestWeatherAPIIntegration(unittest.TestCase):
 
     def setUp(self):
         self.app = app.test_client()
 
-    @patch('backend.requests.get')
+    @patch('api.index.requests.get')
     def test_weather_handler_success(self, mock_get):
         # Mock the responses for the two API calls
         mock_get.side_effect = [
